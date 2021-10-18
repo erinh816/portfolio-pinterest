@@ -1,6 +1,7 @@
 import "./App.css";
 import Header from "./components/Header";
 import Mainboard from "./components/Mainboard";
+import unsplash from "./api/unsplash";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
 }
 
 export default App;
+
 {
   /* <Header loading={true} />; */
 }

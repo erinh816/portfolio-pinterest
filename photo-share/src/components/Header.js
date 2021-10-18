@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import PinterestIcon from "@mui/icons-material/Pinterest";
 //IconButton is the bubble effect when hover over it
@@ -10,6 +10,15 @@ import FaceIcon from "@mui/icons-material/Face";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 function Header() {
+  // hook, input is the value, setInput is the function to change it
+  const [input, setInput] = useState("");
+
+  const onSearchSubmit = (e) => {
+    //prevent it to go to another page
+    e.preventDefault();
+    console.log("this is the input", input);
+  };
+
   return (
     <wrapper>
       <LogoWrapper>
@@ -30,8 +39,8 @@ function Header() {
             <SearchIcon />
           </IconButton>
           <form>
-            <input type="text" />
-            <button type="submit"></button>
+            <input type="text" onChange={(e) => setInput(e.target.value)} />
+            <button type="submit" onClick={onSearchSubmit}></button>
           </form>
         </SearchBarWrapper>
       </SearchWrapper>
