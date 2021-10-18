@@ -3,6 +3,11 @@ import styled from "styled-components";
 import PinterestIcon from "@mui/icons-material/Pinterest";
 //IconButton is the bubble effect when hover over it
 import IconButton from "@mui/material/IconButton";
+import SearchIcon from "@mui/icons-material/Search";
+import NotificationsIcon from "@mui/icons-material/Notifications";
+import TextsmsIcon from "@mui/icons-material/Textsms";
+import FaceIcon from "@mui/icons-material/Face";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 function Header() {
   return (
@@ -21,9 +26,9 @@ function Header() {
 
       <SearchWrapper>
         <SearchBarWrapper>
-          {/* <IconButton>
+          <IconButton>
             <SearchIcon />
-          </IconButton> */}
+          </IconButton>
           <form>
             <input type="text" />
             <button type="submit"></button>
@@ -31,7 +36,20 @@ function Header() {
         </SearchBarWrapper>
       </SearchWrapper>
 
-      {/* <IconsWrapper></IconsWrapper> */}
+      <IconsWrapper>
+        <IconButton>
+          <NotificationsIcon />
+        </IconButton>
+        <IconButton>
+          <TextsmsIcon />
+        </IconButton>
+        <IconButton>
+          <FaceIcon />
+        </IconButton>
+        <IconButton>
+          <KeyboardArrowDownIcon />
+        </IconButton>
+      </IconsWrapper>
     </wrapper>
   );
 }
@@ -39,7 +57,7 @@ function Header() {
 export default Header;
 
 const Wrapper = styled.div`
-  display: flex;
+  display: inline-flex;
 
   aligh-items: center;
   height: 56px;
@@ -49,7 +67,7 @@ const Wrapper = styled.div`
 `;
 
 const LogoWrapper = styled.div`
-  display: flex;
+  display: inline-flex;
   .MuiSvgIcon-root {
     color: #e60023;
     font-size: 32px;
@@ -58,7 +76,7 @@ const LogoWrapper = styled.div`
 `;
 
 const HomePageButton = styled.div`
-  display: flex;
+  display: inline-flex;
 
   height: 48px;
   min-width: 123px;
@@ -76,7 +94,7 @@ const HomePageButton = styled.div`
 `;
 
 const FollowingButton = styled.div`
-  display: flex;
+  display: inline-flex;
   height: 48px;
   min-width: 123px;
   align-items: center;
@@ -99,17 +117,51 @@ const FollowingButton = styled.div`
 // <SearchWrapper> is the whole area, <SearchBarWrapper> is the grey capsule search area
 
 const SearchWrapper = styled.div`
+  display: inline-flex;
   flex: 1;
-  display: flex;
 `;
 // flex:1 takes all of the space it gets, search bar will stretch
 
 const SearchBarWrapper = styled.div`
   background-color: #efefef;
-  display: flex;
+  display: inline-flex;
+
   height: 48px;
   width: 100%;
   border-radius: 50px;
   border: none;
   padding-left: 10px;
+
+  form {
+    display: flex;
+    flex: 1;
+  }
+
+  form > input {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    margin-left: 5px;
+    font-size: 16px;
+  }
+
+  form > button {
+    display: none;
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+  input:active {
+    outline: none;
+  }
+
+  input:hover {
+    outline: none;
+  }
+`;
+
+const IconsWrapper = styled.div`
+  display: inline-flex;
 `;

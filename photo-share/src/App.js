@@ -1,13 +1,17 @@
 import "./App.css";
 import Header from "./components/Header";
+import Mainboard from "./components/Mainboard";
 
 function App() {
   return (
     <div className="app">
-      <Header loading={true} />
-      <h1>Mainboard</h1>
+      <Header />
+      <Mainboard />
     </div>
   );
 }
 
 export default App;
+{
+  /* <Header loading={true} />; */
+}
