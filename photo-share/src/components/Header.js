@@ -9,14 +9,17 @@ import TextsmsIcon from "@mui/icons-material/Textsms";
 import FaceIcon from "@mui/icons-material/Face";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
-function Header() {
+//Header will receive props which is the function? which function?
+function Header(props) {
   // hook, input is the value, setInput is the function to change it
   const [input, setInput] = useState("");
+  //we want to make an API call with this input, and then we want those pins to be distrubuted to Mainboard as props
 
   const onSearchSubmit = (e) => {
     //prevent it to go to another page
     e.preventDefault();
-    console.log("this is the input", input);
+    props.onSubmit(input);
+    // console.log("this is the input", input);
   };
 
   return (
