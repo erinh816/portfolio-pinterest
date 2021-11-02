@@ -82,7 +82,7 @@ const LogoWrapper = styled.div`
   display: flex;
   .MuiSvgIcon-root {
     color: #e60023;
-    font-size: 32px;
+    font-size: 45px;
     cursor: pointer;
   }
 `;

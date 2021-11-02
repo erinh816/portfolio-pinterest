@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Pin from "./Pin";
+import "./Mainboard.css";
 
 function Mainboard(props) {
   let { pinsss } = props;
@@ -8,7 +9,7 @@ function Mainboard(props) {
   //urls down will pass into Pin.js as props
   return (
     <Wrapper>
-      <Container>
+      <Container className="mainboard__container">
         {pinsss.map((pin, index) => {
           let { urls } = pin;
 
@@ -32,7 +33,16 @@ const Wrapper = styled.div`
 `;
 
 const Container = styled.div`
-  display: flex;
-  width: 80%;
+  column-gap: 5px;
+  margin: 0 auto;
+  height: 100%;
+
   background-color: white;
 `;
+
+//befor adding Mansory layout above looks like below with a fixed width
+// const Container = styled.div`
+//   display: flex;
+//   width: 80%;
+//   background-color: white;
+// `;

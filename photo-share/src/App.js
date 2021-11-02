@@ -39,7 +39,7 @@ function App() {
     let promises = [];
     let pinData = [];
 
-    let pins = ["yellow beatle car", "noodles", "cute"];
+    let pins = ["woods", "jelly fish", "space"];
     //pinTerm are the strings in the array above
     pins.forEach((pinTerm) => {
       promises.push(
