@@ -23,7 +23,7 @@ function Header(props) {
   };
 
   return (
-    <wrapper>
+    <Wrapper>
       <LogoWrapper>
         <IconButton>
           <PinterestIcon />
@@ -62,14 +62,14 @@ function Header(props) {
           <KeyboardArrowDownIcon />
         </IconButton>
       </IconsWrapper>
-    </wrapper>
+    </Wrapper>
   );
 }
 
 export default Header;
 
 const Wrapper = styled.div`
-  display: inline-flex;
+  display: flex;
 
   aligh-items: center;
   height: 56px;
@@ -79,7 +79,7 @@ const Wrapper = styled.div`
 `;
 
 const LogoWrapper = styled.div`
-  display: inline-flex;
+  display: flex;
   .MuiSvgIcon-root {
     color: #e60023;
     font-size: 32px;
@@ -88,7 +88,7 @@ const LogoWrapper = styled.div`
 `;
 
 const HomePageButton = styled.div`
-  display: inline-flex;
+  display: flex;
 
   height: 48px;
   min-width: 123px;
@@ -106,7 +106,7 @@ const HomePageButton = styled.div`
 `;
 
 const FollowingButton = styled.div`
-  display: inline-flex;
+  display: flex;
   height: 48px;
   min-width: 123px;
   align-items: center;
@@ -129,7 +129,7 @@ const FollowingButton = styled.div`
 // <SearchWrapper> is the whole area, <SearchBarWrapper> is the grey capsule search area
 
 const SearchWrapper = styled.div`
-  display: inline-flex;
+  display: flex;
   flex: 1;
 `;
 // flex:1 takes all of the space it gets, search bar will stretch
@@ -175,5 +175,5 @@ const SearchBarWrapper = styled.div`
 `;
 
 const IconsWrapper = styled.div`
-  display: inline-flex;
+  display: flex;
 `;

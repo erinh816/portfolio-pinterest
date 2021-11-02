@@ -3,14 +3,17 @@ import styled from "styled-components";
 import Pin from "./Pin";
 
 function Mainboard(props) {
-  let { pins } = props;
+  let { pinsss } = props;
 
+  //urls down will pass into Pin.js as props
   return (
     <Wrapper>
       <Container>
-        {pins.map((pin) => {
+        {pinsss.map((pin, index) => {
           let { urls } = pin;
-          return <Pin urls={urls} />;
+
+          //why does it have to have a return in here to show the pins?
+          return <Pin key={index} urls2={urls} />;
         })}
       </Container>
     </Wrapper>

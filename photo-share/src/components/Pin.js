@@ -2,12 +2,12 @@ import React from "react";
 import styled from "styled-components";
 
 function Pin(props) {
-  let { urls } = props;
+  let { urls2 } = props;
 
   return (
     <Wrapper>
       <Container>
-        <img src={urls?.regular} alt="pin" />
+        <img src={urls2?.regular} alt="pin" />
       </Container>
     </Wrapper>
   );
